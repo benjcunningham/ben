@@ -1,0 +1,8 @@
+Package: ben
+Title: Personal R package of Ben Cunningham
+Version: 0.1
+Authors@R: "Ben Cunningham <benjamin-cunningham@uiowa.edu> [aut, cre]"
+Description: Useful, miscellaneous R functions.
+Depends: R (>= 3.1.2)
+License: GPL-3
+LazyData: true
