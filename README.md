@@ -1,9 +1,7 @@
 ben
 ===
 
----
-
-Personal R package of [Ben Cunningham](www.linkedin.com/in/cunninghamben).
+Personal R package of [Ben Cunningham](http://www.linkedin.com/in/cunninghamben).
 
 ---
 
