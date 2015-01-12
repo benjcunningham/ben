@@ -4,12 +4,14 @@
 \alias{import_scrobbles}
 \title{Import a Last.fm scrobbles sheet as a data frame.}
 \usage{
-import_scrobbles(file, header = FALSE)
+import_scrobbles(file, header = FALSE, date.fmt = "\%d \%b \%Y \%H:\%M")
 }
 \arguments{
-\item{file}{The name of the file which the scrobble data is to be read from.z}
+\item{file}{The name of the file which the scrobble data is to be read from.}
 
 \item{header}{A logical value indicating whether the file contains the names of the variables as its first line.}
+
+\item{date.fmt}{The date format that should be used in the returned data frame.}
 }
 \value{
 A data frame with columns Artist, Album, Song, and Date.
@@ -18,8 +20,6 @@ A data frame with columns Artist, Album, Song, and Date.
 This function initializes a data frame of Last.fm scrobbles.
 }
 \examples{
-\dontrun{
-import_scrobbles(file = "scrobbles.csv")
-}
+import_scrobbles("scrobbles.csv")
 }
 
