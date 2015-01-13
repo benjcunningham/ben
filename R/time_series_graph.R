@@ -6,6 +6,7 @@
 #' @param df.col The name of the column upon which row frequencies should be calculated.
 #' @param date.col The name of the column that contains dates.
 #' @param size A numeric corresponding to line size in the returned plot.
+#' @import ggplot2
 #' @return A ggplot time series graph of frequencies within a column grouped by row.
 #' @examples time_series_graph(df, c("Artist 1", "Artist 2"))
 
