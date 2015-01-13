@@ -4,6 +4,7 @@
 #' @param file The name of the file which the scrobble data is to be read from.
 #' @param header A logical value indicating whether the file contains the names of the variables as its first line.
 #' @param date.fmt The date format that should be used in the returned data frame.
+#' @export
 #' @return A data frame with columns Artist, Album, Song, and Date.
 #' @examples import_scrobbles("scrobbles.csv")
 
