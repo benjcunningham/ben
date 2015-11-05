@@ -8,12 +8,10 @@ alarm <- function(x) {
   file.loc <- x
 
   cmd <-
-    paste0('powershell -c (New-Object Media.SoundPlayer "',
+    paste0('start powershell -windowstyle hidden -c (New-Object Media.SoundPlayer "',
            file.loc,
            '").PlaySync();')
 
   shell(cmd)
 
 }
-
-'C:\\Users\\BENCUN~1\\Desktop\\sucks.wav'
