@@ -5,4 +5,8 @@ Authors@R: "Ben Cunningham <benjamin-cunningham@uiowa.edu> [aut, cre]"
 Description: Useful, miscellaneous R functions.
 Depends: R (>= 3.1.2)
 License: GPL-3
-LazyData: true
+LazyData: TRUE
+URL: https://github.com/benjcunningham/ben
+BugReports: https://github.com/benjcunningham/ben/issues
+Imports:
+  settings
