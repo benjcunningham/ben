@@ -19,5 +19,5 @@ ben.options <- function(...) {
 #' @rdname options
 #' @import settings
 .options <- options_manager(
-  path.alarms = '~'
+  path.alarms = '~/R/alarms/'
 )

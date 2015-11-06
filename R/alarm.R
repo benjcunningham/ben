@@ -5,12 +5,13 @@
 #' @export
 alarm <- function(x) {
 
-  file.loc <- x
-
-  cmd <-
-    paste0('start powershell -windowstyle hidden -c (New-Object Media.SoundPlayer "',
-           file.loc,
-           '").PlaySync();')
+  cmd <- paste0(
+    'start powershell -windowstyle hidden -c ',
+    '(New-Object Media.SoundPlayer "',
+    ben.options('path.alarms'),
+    x,
+    '").PlaySync();'
+  )
 
   shell(cmd)
 
