@@ -7,7 +7,8 @@
 alarm(x)
 }
 \arguments{
-\item{x}{Location of the sound file.}
+\item{x}{Location of the sound file relative the path specified in
+\code{ben.options('path.alarms')}}
 }
 \description{
 Plays a sound file using Powershell.
