@@ -3,6 +3,7 @@
 #' Plays a sound file using Powershell.
 #' @param x Name of the sound file relative the path specified in
 #'   \code{options('ben.alarms')}
+#' @import magrittr
 #' @export
 #' @examples
 #' alarm('Sound.wav')
