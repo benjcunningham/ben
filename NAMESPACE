@@ -2,6 +2,7 @@
 
 export(alarm)
 export(import_scrobbles)
+export(snip.table)
 export(time_series_graph)
 export(v2formula)
 import(ggplot2)

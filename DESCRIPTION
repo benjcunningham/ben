@@ -9,4 +9,6 @@ LazyData: TRUE
 URL: https://github.com/benjcunningham/ben
 BugReports: https://github.com/benjcunningham/ben/issues
 Imports:
-  magrittr
+  clipr,
+  magrittr,
+  readr
