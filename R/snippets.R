@@ -71,8 +71,14 @@ add.names <- function(vec) {
 #' @keywords internal
 combine.vector <- function(x) {
 
-  paste(x, collapse = '", "') %>%
-    paste0('c("', ., '")')
+  use_quotes <- !typeof(x) %in% c('integer', 'double')
+
+  cc <- ifelse(rep(use_quotes, 3),
+               c('", "', 'c("', '")'),
+               c(', ', 'c(', ')'))
+
+  paste(x, collapse = cc[1]) %>%
+    paste0(cc[2], ., cc[3])
 
 }
 
