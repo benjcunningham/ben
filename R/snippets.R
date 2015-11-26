@@ -36,6 +36,7 @@ snip.table <- function(tbl, delim = ' ', ...) {
     tbl <-
       clipr::read_clip() %>%
       paste0(collapse = '\n') %>%
+      succinct.ws(...) %>%
       readr::read_delim(delim = delim, ...)
 
   }
@@ -72,5 +73,21 @@ combine.vector <- function(x) {
 
   paste(x, collapse = '", "') %>%
     paste0('c("', ., '")')
+
+}
+
+#' Strip extra whitespace used for formatting columns
+#'
+#' @return Character string
+#' @keywords internal
+succinct.ws <- function(x, quote) {
+
+  rgx <- '[\t ]+'
+
+  if (!missing(quote)) {
+    rgx <- paste0(rgx, '(?:(?<=[', quote, '])|(?=[', quote, ']))')
+  }
+
+  gsub(rgx, ' ', x, perl = TRUE)
 
 }
