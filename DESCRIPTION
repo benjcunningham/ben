@@ -11,4 +11,5 @@ BugReports: https://github.com/benjcunningham/ben/issues
 Imports:
   clipr,
   magrittr,
-  readr
+  readr,
+  RPushbullet
