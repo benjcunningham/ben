@@ -15,7 +15,7 @@ c2numeric <- function(x, dm = '.') {
 
   paste0('[', dm, ']') %>%
     gsub('.', x) %>%
-    gsub('[^0-9.]', '', .) %>%
+    gsub('[^0-9.-]', '', .) %>%
     as.numeric()
 
 }
