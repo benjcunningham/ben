@@ -16,6 +16,8 @@ The following options should be set in `.Rprofile` to customize the default beha
 
 * `ben.alarms`: Directory of sound assets; for example `~/R/alarms/`
 
+To take advantage of the Pushbullet notification wrappers, `RPushbullet` should be configured with `~/.rpushbullet.json` or equivalent global options.
+
 ## License
 
 This package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License, version 3, as published by the Free Software Foundation.
