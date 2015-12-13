@@ -2,6 +2,8 @@
 
 export(alarm)
 export(c2numeric)
+export(pberrors)
+export(pbmsg)
 export(snip.table)
 export(v2formula)
 import(magrittr)
