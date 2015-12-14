@@ -8,9 +8,9 @@ License: GPL-3
 LazyData: TRUE
 URL: https://github.com/benjcunningham/ben
 BugReports: https://github.com/benjcunningham/ben/issues
+Depends:
+  RPushbullet
 Imports:
   clipr,
   magrittr,
   readr
-Suggests:
-  RPushbullet

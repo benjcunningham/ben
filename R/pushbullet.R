@@ -10,11 +10,6 @@
 pbmsg <- function(body = 'Your script is done.',
                   title = 'Notification from R') {
 
-  if (!requireNamespace('RPushbullet', quietly = TRUE)) {
-    stop('Please install RPushbullet to use this function.',
-         call. = FALSE)
-  }
-
   RPushbullet::pbPost(type = 'note',
                       title = title,
                       body = body)
@@ -35,11 +30,6 @@ pbmsg <- function(body = 'Your script is done.',
 #'   pberrors(FALSE)
 #' }
 pberrors <- function(status = TRUE) {
-
-  if (!requireNamespace('RPushbullet', quietly = TRUE)) {
-    stop('Please install RPushbullet to use this function.',
-         call. = FALSE)
-  }
 
   options(error = function() {
     ifelse(status,
