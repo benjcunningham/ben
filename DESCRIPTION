@@ -3,13 +3,13 @@ Title: Personal R package of Ben Cunningham
 Version: 0.1
 Authors@R: "Ben Cunningham <benjamin-cunningham@uiowa.edu> [aut, cre]"
 Description: Useful, miscellaneous R functions.
-Depends: R (>= 3.1.2)
+Depends:
+    R (>= 3.1.2),
+    RPushbullet
 License: GPL-3
 LazyData: TRUE
 URL: https://github.com/benjcunningham/ben
 BugReports: https://github.com/benjcunningham/ben/issues
-Depends:
-  RPushbullet
 Imports:
   clipr,
   magrittr,
