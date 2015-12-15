@@ -4,7 +4,7 @@
 \alias{pberrors}
 \title{Send errors via Pushbullet}
 \usage{
-pberrors(status = TRUE)
+pberrors(status = TRUE, ...)
 }
 \arguments{
 \item{status}{Whether or not to send errors}

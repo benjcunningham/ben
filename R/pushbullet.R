@@ -8,11 +8,12 @@
 #' @examples
 #' \dontrun{pbmsg('Your script has finished.')}
 pbmsg <- function(body = 'Your script is done.',
-                  title = 'Notification from R') {
+                  title = 'Notification from R',
+                  ...) {
 
-  RPushbullet::pbPost(type = 'note',
-                      title = title,
-                      body = body)
+  RPushbullet::pbPost(title = title,
+                      body = body,
+                      ...)
 
 }
 
@@ -29,13 +30,14 @@ pbmsg <- function(body = 'Your script is done.',
 #'   # Some script...
 #'   pberrors(FALSE)
 #' }
-pberrors <- function(status = TRUE) {
+pberrors <- function(status = TRUE, ...) {
 
   options(error = function() {
     ifelse(status,
-           RPushbullet::pbPost('note',
-                               'Error from R',
-                               geterrmessage()),
+           RPushbullet::pbPost(type = 'note',
+                               title = 'Error from R',
+                               body = geterrmessage(),
+                               ...),
            NULL)
     })
 

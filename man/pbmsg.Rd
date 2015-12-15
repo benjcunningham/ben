@@ -4,7 +4,7 @@
 \alias{pbmsg}
 \title{Send a message via Pushbullet}
 \usage{
-pbmsg(body = "Your script is done.", title = "Notification from R")
+pbmsg(body = "Your script is done.", title = "Notification from R", ...)
 }
 \arguments{
 \item{body}{Body text to be used in message.}
