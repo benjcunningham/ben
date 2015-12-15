@@ -20,5 +20,9 @@ the behavior of some functions.
    \code{~/R/alarms/}
 
 }
+
+To take advantage of the Pushbullet notification wrappers,
+\code{RPushbullet} should be configured with
+\code{~/.rpushbullet.json} or equivalent global options.
 }
 
