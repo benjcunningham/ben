@@ -1,4 +1,4 @@
-context('str_convert')
+context('c2numeric')
 
 test_that('Currency vectors covert to numerics', {
 
