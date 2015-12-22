@@ -14,6 +14,6 @@ alarm(x)
 Plays a sound file using Powershell.
 }
 \examples{
-alarm('Sound.wav')
+\dontrun{alarm('Sound.wav')}
 }
 

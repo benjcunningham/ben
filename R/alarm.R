@@ -6,7 +6,7 @@
 #' @import magrittr
 #' @export
 #' @examples
-#' alarm('Sound.wav')
+#' \dontrun{alarm('Sound.wav')}
 alarm <- function(x) {
 
   path <-

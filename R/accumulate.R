@@ -16,7 +16,7 @@
 #' df <- data.frame(X1 = c('a', 'b', 'b', 'b', 'a', 'a', 'b'),
 #'                  X2 = c('c', 'c', 'd', 'c', 'd', 'd', 'c'),
 #'                  C1 = c(2, 5, 1, 7, 3, 1, 2))
-#' accumulate(C2 ~ X1 + X2, df, FUN = cumsum)
+#' accumulate(C1 ~ X1 + X2, df, FUN = cumsum)
 accumulate <- function(formula, data, FUN = cumsum) {
 
   y <-
