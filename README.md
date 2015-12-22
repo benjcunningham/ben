@@ -1,6 +1,7 @@
 # ben
 
 [![Build Status](https://travis-ci.org/benjcunningham/ben.svg?branch=master)](https://travis-ci.org/benjcunningham/ben)
+[![Coverage](https://codecov.io/github/benjcunningham/ben/coverage.svg?branch=master)](https://codecov.io/github/benjcunningham/ben?branch=master)
 
 Personal R package of [Ben Cunningham](http://www.linkedin.com/in/cunninghamben).
 
