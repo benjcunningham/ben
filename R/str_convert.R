@@ -9,8 +9,8 @@
 #' @examples
 #' c2numeric('$432.99')
 #'
-#' c('€5000,00', '€432,00', '€100') %>%
-#'   c2numeric(dm = ',')
+#' eur <- c('€5000,00', '€432,00', '€100')
+#' c2numeric(eur, dm = ',')
 c2numeric <- function(x, dm = '.') {
 
   paste0('[', dm, ']') %>%

@@ -17,7 +17,7 @@ Converts a string formatted as some currency to a numeric.
 \examples{
 c2numeric('$432.99')
 
-c('â‚¬5000,00', 'â‚¬432,00', 'â‚¬100') \%>\%
-  c2numeric(dm = ',')
+eur <- c('€5000,00', '€432,00', '€100')
+c2numeric(eur, dm = ',')
 }
 
