@@ -1,5 +1,6 @@
-ben
-===
+# ben
+
+[![Build Status](https://travis-ci.org/benjcunningham/ben.svg?branch=master)](https://travis-ci.org/benjcunningham/ben)
 
 Personal R package of [Ben Cunningham](http://www.linkedin.com/in/cunninghamben).
 
