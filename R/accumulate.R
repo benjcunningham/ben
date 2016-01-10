@@ -8,6 +8,8 @@
 #'   accumulated.
 #' @param data A data frame containing the variables in the formula.
 #' @param FUN Function to apply to each group.
+#' @param rev Whether or not to perform \code{FUN} on a reversed
+#'   ordering of elements in \code{data}.
 #' @return A vector of accumulated values
 #' @import magrittr
 #' @rdname accumulate
@@ -17,7 +19,11 @@
 #'                  X2 = c('c', 'c', 'd', 'c', 'd', 'd', 'c'),
 #'                  C1 = c(2, 5, 1, 7, 3, 1, 2))
 #' accumulate(C1 ~ X1 + X2, df, FUN = cumsum)
-accumulate <- function(formula, data, FUN = cumsum) {
+accumulate <- function(formula, data, FUN = cumsum, rev = FALSE) {
+
+  if (rev) {
+    data <- data[rev(rownames(data)), ]
+  }
 
   y <-
     ifelse(
@@ -35,6 +41,7 @@ accumulate <- function(formula, data, FUN = cumsum) {
     eval(parse(text = y)),
     eval(parse(text = g)),
     FUN = FUN
-  )
+  ) %>%
+  {ifelse(rev, rev(.), .)}
 
 }

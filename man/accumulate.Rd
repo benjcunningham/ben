@@ -4,7 +4,7 @@
 \alias{accumulate}
 \title{Cumulative Sums, Product, and Extremes by Subset}
 \usage{
-accumulate(formula, data, FUN = cumsum)
+accumulate(formula, data, FUN = cumsum, rev = FALSE)
 }
 \arguments{
 \item{formula}{An object of class \code{formula} that symbolizes how
@@ -14,6 +14,9 @@ accumulated.}
 \item{data}{A data frame containing the variables in the formula.}
 
 \item{FUN}{Function to apply to each group.}
+
+\item{rev}{Whether or not to perform \code{FUN} on a reversed
+ordering of elements in \code{data}.}
 }
 \value{
 A vector of accumulated values
