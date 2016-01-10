@@ -22,7 +22,7 @@
 accumulate <- function(formula, data, FUN = cumsum, rev = FALSE) {
 
   if (rev) {
-    data <- data[rev(rownames(data)), ]
+    data <- data.frame(data[rev(rownames(data)), ])
   }
 
   y <-
@@ -42,6 +42,6 @@ accumulate <- function(formula, data, FUN = cumsum, rev = FALSE) {
     eval(parse(text = g)),
     FUN = FUN
   ) %>%
-  {ifelse(rev, rev(.), .)}
+  {if (rev) rev(.) else .}
 
 }
