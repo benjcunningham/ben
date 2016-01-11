@@ -22,7 +22,7 @@
 accumulate <- function(formula, data, FUN = cumsum, rev = FALSE) {
 
   if (rev) {
-    data <- data.frame(data[rev(rownames(data)), ])
+    data <- data[rev(rownames(data)), , drop = FALSE]
   }
 
   y <-
