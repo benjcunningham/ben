@@ -22,8 +22,12 @@ test_that('Groups accumulate in reverse order', {
     B = c(seq(1, 10, 2))
   )
 
-  expect_equal(accumulate(  ~ A, x, rev = TRUE), c(3, 2, 2, 1, 1))
-  expect_equal(accumulate(B ~ A, x, rev = TRUE), c(11, 10, 14, 7, 9))
+  expect_equal(accumulate(  ~ A, x, rev = TRUE),
+               c(3, 2, 2, 1, 1))
+  expect_equal(accumulate(  ~ A, x[ , 'A', drop = FALSE], rev = TRUE),
+               c(3, 2, 2, 1, 1))
+  expect_equal(accumulate(B ~ A, x, rev = TRUE),
+               c(11, 10, 14, 7, 9))
   expect_equal(accumulate(B ~ A, x, FUN = cummax, rev = TRUE),
                c(7, 7, 9, 7, 9))
   expect_equal(accumulate(B ~ A, x, FUN = cummin, rev = TRUE),
