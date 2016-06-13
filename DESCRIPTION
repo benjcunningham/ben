@@ -11,8 +11,9 @@ LazyData: TRUE
 URL: https://github.com/benjcunningham/ben
 BugReports: https://github.com/benjcunningham/ben/issues
 Imports:
-  clipr,
-  magrittr,
-  readr
+    clipr,
+    magrittr,
+    readr
 Suggests:
-  testthat
+    testthat
+RoxygenNote: 5.0.1
