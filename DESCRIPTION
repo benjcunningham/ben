@@ -14,9 +14,7 @@ Depends:
     R (>= 3.1.2),
     RPushbullet
 Imports:
-    clipr,
     dplyr,
-    readr,
     rmarkdown
 Suggests:
     testthat
