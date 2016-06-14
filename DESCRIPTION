@@ -1,19 +1,21 @@
 Package: ben
 Title: Personal R package of Ben Cunningham
 Version: 0.1
-Authors@R: "Ben Cunningham <benjamin-cunningham@uiowa.edu> [aut, cre]"
 Description: Useful, miscellaneous R functions.
+Authors@R:
+    person("Ben", "Cunningham", email = "benjamescunningham@gmail.com",
+           role = c("aut", "cre"))
+URL: https://github.com/benjcunningham/ben
+BugReports: https://github.com/benjcunningham/ben/issues
+License: MIT + file LICENSE
+LazyData: TRUE
+RoxygenNote: 5.0.1
 Depends:
     R (>= 3.1.2),
     RPushbullet
-License: GPL-3
-LazyData: TRUE
-URL: https://github.com/benjcunningham/ben
-BugReports: https://github.com/benjcunningham/ben/issues
 Imports:
     clipr,
     magrittr,
     readr
 Suggests:
     testthat
-RoxygenNote: 5.0.1
