@@ -7,7 +7,10 @@
 pberrors(status = TRUE, ...)
 }
 \arguments{
-\item{status}{Whether or not to send errors}
+\item{status}{Whether or not to send errors.}
+
+\item{\dots}{Additional parameters to be passed to
+\code{RPushbullet::pbPost()}.}
 }
 \description{
 Sends all future error messages via Pushbullet. If \code{status} set

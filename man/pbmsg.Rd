@@ -7,12 +7,16 @@
 pbmsg(body = "Your script is done.", title = "Notification from R", ...)
 }
 \arguments{
-\item{body}{Body text to be used in message.}
+\item{body}{Body text of message.}
 
-\item{title}{Title to be used in message.}
+\item{title}{Title of message.}
+
+\item{\dots}{Additional parameters to be passed to
+\code{RPushbullet::pbPost()}.}
 }
 \description{
-Sends a message via Pushbullet.
+Sends a message via Pushbullet. This function is just a lazy wrapper
+around \code{RPushbullet::pbPost}.
 }
 \examples{
 \dontrun{pbmsg('Your script has finished.')}
