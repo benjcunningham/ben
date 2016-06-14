@@ -7,7 +7,6 @@
 #'   clipboard
 #' @param delim The field separator character
 #' @param ... Further arguments to be passed to `readr::read_delim`
-#' @import magrittr
 #' @rdname snip.table
 #' @export
 #' @examples

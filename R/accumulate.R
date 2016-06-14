@@ -11,7 +11,6 @@
 #' @param rev Whether or not to perform \code{FUN} on a reversed
 #'   ordering of elements in \code{data}.
 #' @return A vector of accumulated values
-#' @import magrittr
 #' @rdname accumulate
 #' @export
 #' @examples

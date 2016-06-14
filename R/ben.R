@@ -20,4 +20,8 @@
 #'
 #' @docType package
 #' @name ben
+#' @importFrom dplyr %>%
 NULL
+
+# Quiets R CMD check NOTEs for `.` in pipelines
+utils::globalVariables(c("."))

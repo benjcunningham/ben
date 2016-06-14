@@ -3,7 +3,6 @@
 #' Converts a string formatted as some currency to a numeric.
 #' @param x Character vector to be converted
 #' @param dm Decimal mark used in the currency format
-#' @import magrittr
 #' @rdname c2numeric
 #' @export
 #' @examples
