@@ -1,4 +1,5 @@
 
+<!-- README.md is generated from README.Rmd. Please edit that file. -->
 ben
 ===
 
@@ -6,7 +7,9 @@ ben
 
 Personal R package of [Ben Cunningham](http://www.linkedin.com/in/cunninghamben).
 
-This repository is a compilation of functions that I find useful. It is inspired by [Hilary Parker's](http://hilaryparker.com/) article [Personal R Packages](http://hilaryparker.com/2013/04/03/personal-r-packages/). To get started creating your own packages, I recommend [her tutorial](http://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/).
+This repository is a compilation of functions that I find useful. It is inspired by Hilary Parker's article [Personal R Packages](http://hilaryparker.com/2013/04/03/personal-r-packages/). To get started creating your own packages, I recommend [her tutorial](http://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/).
+
+This project is subject to change erratically, so it would be unwise to rely on anything here as a long-term dependency. Feel free to clone anything you find particularly valuable for use in your own personal function repo.
 
 Installation
 ------------
@@ -64,12 +67,3 @@ ben::knit_htmlwidgets("./_R/test-post.Rmd")
 -   Build the site with `servr::jekyll()`.
 
 For more information, see the post [Hacking Together htmlwidgets for Jekyll](http://benjcunningham.org/2016/06/13/hacking-together-htmlwidgets-for-jekyll.html).
-
-License
--------
-
-This package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License, version 3, as published by the Free Software Foundation.
-
-This program is distributed in the hope that it will be useful, but without any warranty; without even the implied warranty of merchantability or fitness for a particular purpose. See the GNU General Public License for more details.
-
-A copy of the GNU General Public License, version 3, is available at <http://www.r-project.org/Licenses/GPL-3>.
