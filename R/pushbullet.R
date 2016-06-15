@@ -1,3 +1,8 @@
+# Most things here are modified versions of functions in the RPushbullet
+# source or in Karl Broman's personal package:
+#   https://github.com/eddelbuettel/rpushbullet/blob/master/R/init.R
+#   https://github.com/kbroman/broman/blob/master/R/pushbullet.R
+
 #' Send a message via Pushbullet
 #'
 #' Sends a message via Pushbullet. This function is just a lazy wrapper
@@ -17,9 +22,8 @@ pbmsg <- function(body = 'Your script is done.',
                   title = 'Notification from R',
                   ...) {
 
-  RPushbullet::pbPost(title = title,
-                      body = body,
-                      ...)
+  load_pushbullet()
+  RPushbullet::pbPost(title = title, body = body, ...)
 
 }
 
@@ -43,6 +47,7 @@ pbmsg <- function(body = 'Your script is done.',
 #' }
 pberrors <- function(status = TRUE, ...) {
 
+  load_pushbullet()
   options(error = function() {
     ifelse(status,
            RPushbullet::pbPost(type = 'note',
@@ -51,5 +56,40 @@ pberrors <- function(status = TRUE, ...) {
                                ...),
            NULL)
   })
+
+}
+
+#' Load a Pushbullet profile
+#'
+#' To avoid truly attaching RPushbullet, this function simulates all of
+#' the options updates necessary to get the package internals up and
+#' running.
+#'
+#' @keywords internal
+load_pushbullet <- function() {
+
+  if (is.null(getOption("rpushbullet.key"))) {
+
+    assign("curl", Sys.which("curl"), envir = RPushbullet:::.pkgenv)
+
+    dotfile <- "~/.rpushbullet.json"
+
+    if (!file.exists(dotfile)) {
+      stop("Cannot read ~/.rpushbullet.json")
+    }
+
+    pb <- jsonlite::fromJSON(dotfile)
+    assign("pb", pb, envir = RPushbullet:::.pkgenv)
+
+    options(
+      rpushbullet.key = pb$key,
+      rpushbullet.devices = pb$devices,
+      rpushbullet.names = pb$names,
+      rpushbullet.defaultdevice = pb$defaultdevice %||% 0,
+      rpushbullet.testemail = pb$testemail %||% character(),
+      rpushbullet.testchannel = pb$testchannel %||% character()
+    )
+
+  }
 
 }

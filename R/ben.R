@@ -21,6 +21,7 @@
 #' @docType package
 #' @name ben
 #' @importFrom dplyr %>%
+#' @importFrom purrr %||%
 NULL
 
 # Quiets R CMD check NOTEs for `.` in pipelines
