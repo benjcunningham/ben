@@ -21,13 +21,15 @@ devtools::install_github("benjcunningham/ben")
 Usage Tips
 ----------
 
-### Pushbullet
+### .RProfile
 
 The following options should be set in `.Rprofile` to customize the default behaviour of some functions.
 
 -   `ben.alarms`: Directory of sound assets; for example `~/R/alarms/`
 
-To take advantage of the Pushbullet notification wrappers, `RPushbullet` should be configured with `~/.rpushbullet.json` or equivalent global options.
+### Pushbullet
+
+To take advantage of the Pushbullet notification wrappers, `RPushbullet` should be configured with `~/.rpushbullet.json` ~~or equivalent global options~~. In the past, it was necessary to attach `RPushbullet` to make API calls; this is no longer the case, but you must set options in the JSON dotfile.
 
 ### Jekyll
 
