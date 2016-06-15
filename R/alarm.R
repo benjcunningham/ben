@@ -6,22 +6,16 @@
 #' @export
 #' @examples
 #' \dontrun{alarm('Sound.wav')}
-alarm <- function(x) {
+alarm <- function(x = getOption("ben.alarmdefault")) {
+
+  root <- path.expand(getOption("ben.alarms"))
 
   path <-
-    getOption('ben.alarms') %>%
-    path.expand() %>%
-    paste0(., x) %>%
-    normalizePath() %>%
-    paste0('cmd /c for %A in ("', ., '") do @echo %~sA') %>%
-    shell(intern = TRUE)
+    normalizePath(file.path(root, x)) %>%
+    sprintf("cmd /c for %%A in (\"%s\") do @echo %%~sA", .) %>%
+    system(intern = TRUE)
 
-  cmd <- paste0(
-    'start powershell -windowstyle hidden -c (New-Object Media.SoundPlayer "',
-    path,
-    '").PlaySync();'
-  )
-
-  shell(cmd)
+  sprintf("(New-Object Media.SoundPlayer \"%s\").PlaySync();", path) %>%
+    shell(shell = "powershell", wait = FALSE)
 
 }
