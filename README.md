@@ -26,6 +26,7 @@ Usage Tips
 The following options should be set in `.Rprofile` to customize the default behaviour of some functions.
 
 -   `ben.alarms`: Directory of sound assets; for example `~/R/alarms/`
+-   `ben.alarmdefault`: Default sound file to play; for example `Hangouts.wav`
 
 ### Pushbullet
 
