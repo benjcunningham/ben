@@ -4,7 +4,7 @@
 \alias{alarm}
 \title{Play an alarm}
 \usage{
-alarm(x)
+alarm(x = getOption("ben.alarmdefault"))
 }
 \arguments{
 \item{x}{Name of the sound file relative the path specified in

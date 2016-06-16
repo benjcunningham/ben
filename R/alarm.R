@@ -9,13 +9,25 @@
 alarm <- function(x = getOption("ben.alarmdefault")) {
 
   root <- path.expand(getOption("ben.alarms"))
+  os <- Sys.info()["sysname"]
 
-  path <-
-    normalizePath(file.path(root, x)) %>%
-    sprintf("cmd /c for %%A in (\"%s\") do @echo %%~sA", .) %>%
-    system(intern = TRUE)
+  if (os == "Windows") {
 
-  sprintf("(New-Object Media.SoundPlayer \"%s\").PlaySync();", path) %>%
-    shell(shell = "powershell", wait = FALSE)
+    path <-
+      normalizePath(file.path(root, x)) %>%
+      sprintf("cmd /c for %%A in (\"%s\") do @echo %%~sA", .) %>%
+      system(intern = TRUE)
+
+    code <-
+      sprintf("(New-Object Media.SoundPlayer \"%s\").PlaySync();", path) %>%
+      shell(shell = "powershell", wait = FALSE)
+
+  } else {
+
+    code <- -1
+
+  }
+
+  return(invisible(code))
 
 }
