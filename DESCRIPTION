@@ -16,6 +16,7 @@ Imports:
     dplyr,
     jsonlite,
     purrr,
+    readxl,
     rmarkdown,
     RPushbullet
 Suggests:

@@ -42,7 +42,7 @@ bind_excel_  <- function(path, pattern, progress) {
       
       message("Skipping sheets:")
     
-      walk(ss[!grepl(pattern, ss)], function(x) {
+      purrr::walk(ss[!grepl(pattern, ss)], function(x) {
         paste("...", x) %>%
           message()
       })
