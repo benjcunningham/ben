@@ -12,4 +12,3 @@ the options updates necessary to get the package internals up and
 running.
 }
 \keyword{internal}
-

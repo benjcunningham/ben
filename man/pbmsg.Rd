@@ -21,4 +21,3 @@ around \code{RPushbullet::pbPost}.
 \examples{
 \dontrun{pbmsg('Your script has finished.')}
 }
-

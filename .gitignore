@@ -2,3 +2,5 @@
 .Rhistory
 .Rproj.user/
 .Rproj.user
+client_secret_google.json
+.httr-oauth

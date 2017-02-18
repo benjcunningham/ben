@@ -23,4 +23,3 @@ to \code{FALSE}, future error messages are no longer pushed.
   pberrors(FALSE)
 }
 }
-

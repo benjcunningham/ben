@@ -16,4 +16,3 @@ Plays a sound file using Powershell.
 \examples{
 \dontrun{alarm('Sound.wav')}
 }
-

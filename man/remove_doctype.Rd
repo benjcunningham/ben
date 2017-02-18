@@ -18,4 +18,3 @@ Integer indicating how many lines were removed. Should
 Rewrites an HTML file with the <!DOCTYPE html> tag removed.
 }
 \keyword{internal}
-

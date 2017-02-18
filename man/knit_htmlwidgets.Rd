@@ -13,11 +13,11 @@ knit_htmlwidgets(input, output_dir = "./_includes/htmlwidgets", ...,
 \item{output_dir}{Directory where the rendered HTML should be
 written.}
 
-\item{verbose}{Logical indicating whether to print informative
-messages.}
-
 \item{\dots}{Additional arguments to be passed to
 \code{rmarkdown::render}.}
+
+\item{verbose}{Logical indicating whether to print informative
+messages.}
 }
 \value{
 Invisible TRUE, no matter what.
@@ -27,4 +27,3 @@ Renders an R Markdown document as HTML, minus the <!DOCTYPE html>
 declaration. Useful as an intermediate step in serving an R Markdown
 document with htmlwidget-like content as a Jekyll post.
 }
-
